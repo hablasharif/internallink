@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Link Generator</title>
+</head>
+<body>
+    <h1>Internal Link Generator for SEO</h1>
+    <form method="POST">
+        <label for="user_input">Enter URLs:</label><br>
+        <textarea name="user_input" id="user_input" rows="5" cols="40"></textarea><br>
+        <input type="submit" value="Generate Internal Links">
+    </form>
+
+    {% if internal_links %}
+        <h2>Internal Links:</h2>
+        <div>{{ internal_links|safe }}</div>
+    {% endif %}
+</body>
+</html>
